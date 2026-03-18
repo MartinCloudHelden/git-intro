@@ -11,9 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello from action"
+      - run: echo "hello from ${{ github.job }}"
 
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello from action"
+      - run: echo "hello from ${{ github.job }}"
