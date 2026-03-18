@@ -3,7 +3,17 @@ name: For every push
 on: push
 
 jobs:
-  hello-world:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello from ${{ github.job }}"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello from action"
+
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello from action"
